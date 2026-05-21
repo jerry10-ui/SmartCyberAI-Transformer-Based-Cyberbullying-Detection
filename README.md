@@ -343,19 +343,13 @@ SmartCyberAI/
 │   └── processed/
 │
 ├── models/
-│
+│   ├── saved_model/
+
 ├── src/
 │   ├── app/
+|      ├── templates/      
 │   ├── training/
 │   └── preprocessing/
-│
-├── templates/
-│
-├── static/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
 ```
 
 ---
