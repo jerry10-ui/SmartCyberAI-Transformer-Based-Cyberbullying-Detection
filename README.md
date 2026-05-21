@@ -1,4 +1,4 @@
-# SmartCyberAI
+# SmartCyberAI - Transformer Based Cyberbullying Detection
 
 Transformer-Based Multi-Label Cyberbullying Detection System using DistilBERT and Natural Language Processing.
 
@@ -284,23 +284,6 @@ python app.py
 
 ---
 
-# API Endpoint
-
-## Prediction API
-
-```http
-POST /api/predict
-```
-
-Example Request:
-
-```json
-{
-    "text": "You are stupid"
-}
-```
----
-
 # Conclusion
 
 SmartCyberAI demonstrates the effectiveness of Transformer-based Deep Learning for cyberbullying detection.
@@ -313,4 +296,5 @@ The project combines AI, NLP, and web technologies to create a practical and int
 
 # Author
 
-Abhay Garg
+Developed by Abhay Garg 
+(Pursuing B.Tech CSE – AI/ML)
