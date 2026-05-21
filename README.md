@@ -1,48 +1,39 @@
 # SmartCyberAI
 
-AI-Driven Multi-Label Cyberbullying Detection System using Transformer-Based Deep Learning and Classical Machine Learning Baselines.
+Transformer-Based Multi-Label Cyberbullying Detection System using DistilBERT and Natural Language Processing.
 
 ---
 
-# 📌 Project Overview
+# Project Overview
 
-SmartCyberAI is an intelligent cyberbullying and hate speech detection system developed using Natural Language Processing (NLP), Machine Learning, and Transformer-based Deep Learning techniques.
+SmartCyberAI is an AI-powered cyberbullying detection system developed using Transformer-based Deep Learning and Natural Language Processing (NLP).
 
-The system is capable of detecting multiple forms of harmful online content from textual input, including:
+The system is capable of identifying multiple forms of harmful online behavior from textual content in real time using a fine-tuned DistilBERT model.
 
-- Hate Speech
-- Toxic Content
-- Aggression
-- Bullying
-- Racism
-- Sexism
-- Religious Hate
-- Offensive Language
-
-The project also includes a comparative experimental study between classical machine learning algorithms and a Transformer-based DistilBERT model.
+The project focuses on detecting cyberbullying across multiple categories including hate speech, toxic language, aggression, racism, sexism, and offensive content.
 
 ---
 
-# 🎯 Objectives
+# Objectives
 
-- Detect cyberbullying automatically from user text
-- Perform multi-label classification on harmful content
-- Compare classical ML baselines with transformer-based deep learning
-- Build a full-stack web application for real-time prediction
-- Reproduce and analyze baseline methodology from a Springer research paper
+- Detect cyberbullying and hate speech automatically
+- Perform multi-label text classification
+- Build a real-time AI-powered prediction system
+- Improve contextual understanding using transformer architecture
+- Create a user-friendly web application for analysis and monitoring
 
 ---
 
-# 🧠 Features
+# Key Features
 
 ## 🔹 AI Features
 
-- Multi-label cyberbullying classification
 - Transformer-based DistilBERT model
-- TF-IDF based classical ML baselines
-- Stacked Ensemble implementation
+- Multi-label cyberbullying classification
+- Context-aware text understanding
 - Real-time prediction system
-- Confidence score visualization
+- Confidence score analysis
+- Risk-level detection
 
 ---
 
@@ -52,16 +43,16 @@ The project also includes a comparative experimental study between classical mac
 - User-specific dashboards
 - Profile management
 - Activity history tracking
-- Risk-level detection
+- Risk analytics
 - Model information page
-- REST API endpoint
-- Modern responsive UI
+- REST API integration
+- Responsive modern UI
 
 ---
 
-# 🏷 Labels Supported
+# Supported Labels
 
-The system supports the following categories:
+The system supports detection of the following categories:
 
 | Label |
 |------|
@@ -76,139 +67,41 @@ The system supports the following categories:
 
 ---
 
-# 📂 Datasets Used
+# Dataset Information
 
-Three Kaggle datasets were used:
+The model was trained on a custom merged dataset created from multiple publicly available cyberbullying and hate speech datasets.
 
-1. Cyberbullying Dataset
-2. CyberBullying Detection Dataset
-3. Hate Speech Detection Curated Dataset
-
-After preprocessing and balancing:
-
-```text
-Final Dataset Size: 281,197 samples
-```
-
----
-
-# ⚙️ Dataset Processing Pipeline
-
-The following preprocessing steps were performed:
+### Dataset Processing Included
 
 - Data cleaning
 - Label standardization
 - Multi-label conversion
-- Dataset merging
 - Dataset balancing
-- Train-validation split
+- Train-validation splitting
 
----
-
-# 🧪 Experimental Setup
-
-## 📊 Train / Validation Split
-
-```python
-test_size = 0.1
-random_state = 42
-```
-
-## 📈 Evaluation Metrics
-
-- Macro F1 Score
-- Micro F1 Score
-- Precision
-- Recall
-
-Primary Metric:
+### Final Dataset Size
 
 ```text
-Macro F1 Score
+281,197 samples
 ```
 
 ---
 
-# 🤖 Models Implemented
-
-## 🔹 Classical Machine Learning Baselines
-
-### 1️⃣ Logistic Regression
-
-Pipeline:
-
-```text
-TF-IDF → Logistic Regression
-```
-
----
-
-### 2️⃣ Support Vector Machine (SVM)
-
-Pipeline:
-
-```text
-TF-IDF → Linear SVM
-```
-
----
-
-### 3️⃣ Random Forest
-
-Pipeline:
-
-```text
-TF-IDF → SVD → Random Forest
-```
-
----
-
-### 4️⃣ XGBoost
-
-Pipeline:
-
-```text
-TF-IDF → XGBoost
-```
-
----
-
-### 5️⃣ Stacked Ensemble
-
-Base Models:
-
-- Logistic Regression
-- SVM
-- Random Forest
-- XGBoost
-
-Meta Model:
-
-- Logistic Regression
-
-Pipeline:
-
-```text
-TF-IDF
-   ↓
-LR + SVM + RF + XGB
-   ↓
-Meta Classifier
-```
-
----
-
-# 🧠 Proposed Deep Learning Model
+# Deep Learning Model
 
 ## DistilBERT
 
-Model:
+The project uses:
 
 ```text
 distilbert-base-uncased
 ```
 
-Configuration:
+DistilBERT is a lightweight transformer architecture derived from BERT that provides strong NLP performance with reduced computational cost.
+
+---
+
+# Model Configuration
 
 | Parameter | Value |
 |------|------|
@@ -217,80 +110,80 @@ Configuration:
 | Epochs | 2 |
 | Optimizer | AdamW |
 | Learning Rate | 2e-5 |
-
-Task Type:
-
-```text
-Multi-label Classification
-```
+| Task Type | Multi-label Classification |
 
 ---
 
-# 📊 Final Results
+# Model Performance
 
-| Model | Macro F1 |
+## Final Evaluation Result
+
+| Metric | Score |
 |------|------|
-| Random Forest | 0.2666 |
-| Logistic Regression | 0.3767 |
-| XGBoost | 0.3838 |
-| SVM | 0.4097 |
-| Stacked Ensemble | 0.3978 |
-| **DistilBERT (Proposed)** | **0.7446** |
+| Macro F1 Score | 0.7446 |
+
+The transformer-based approach achieved strong performance in detecting contextual and semantically complex cyberbullying patterns.
 
 ---
 
-# 🔍 Key Findings
+# Why Transformers?
 
-- Transformer models significantly outperform classical ML approaches.
-- TF-IDF based models struggle with contextual understanding.
-- SVM performed best among traditional classifiers.
-- Random Forest performed poorly on sparse high-dimensional TF-IDF vectors.
-- DistilBERT achieved the highest Macro F1 score due to contextual embedding capabilities.
+Traditional NLP techniques often fail to understand contextual meaning in text.
+
+Transformer architectures like DistilBERT provide:
+
+- Context-aware understanding
+- Semantic representation learning
+- Better handling of informal social media language
+- Improved multi-label classification performance
 
 ---
 
-# 🖥 System Architecture
+# System Architecture
 
 ```text
 User Input
     ↓
 Text Preprocessing
     ↓
-DistilBERT Prediction Engine
+DistilBERT Tokenization
+    ↓
+Transformer Prediction Engine
     ↓
 Multi-label Classification
     ↓
 Risk Analysis
     ↓
-Web Dashboard Visualization
+Dashboard Visualization
 ```
 
 ---
 
-# 🌐 Web Application Modules
+# Web Application Modules
 
 ## 🔹 Authentication System
 
-- User registration
-- User login
-- Session management
-- Logout functionality
+- User Registration
+- User Login
+- Session Management
+- Logout Functionality
 
 ---
 
 ## 🔹 Dashboard
 
 - Risk statistics
-- Activity history
 - Recent analyses
-- User-specific logs
+- User activity tracking
+- Prediction history
 
 ---
 
-## 🔹 Profile Page
+## 🔹 Profile Section
 
 - User details
 - Total analyses performed
+- Account management
 
 ---
 
@@ -299,14 +192,14 @@ Web Dashboard Visualization
 Displays:
 
 - Model architecture
-- Dataset size
-- Evaluation metrics
-- Hardware details
 - Supported labels
+- Evaluation metrics
+- Dataset details
+- Training configuration
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 ## Backend
 
@@ -316,12 +209,12 @@ Displays:
 
 ---
 
-## Machine Learning / Deep Learning
+## Deep Learning & NLP
 
 - PyTorch
 - HuggingFace Transformers
+- DistilBERT
 - Scikit-learn
-- XGBoost
 
 ---
 
@@ -333,7 +226,7 @@ Displays:
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```text
 SmartCyberAI/
@@ -343,18 +236,21 @@ SmartCyberAI/
 │   └── processed/
 │
 ├── models/
-│   ├── saved_model/
-
+│
 ├── src/
 │   ├── app/
-|      ├── templates/      
+|      ├── templates/
 │   ├── training/
 │   └── preprocessing/
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
 
-# 🚀 Installation & Setup
+# Installation & Setup
 
 ## 1️⃣ Clone Repository
 
@@ -364,7 +260,7 @@ git clone https://github.com/YOUR_USERNAME/SmartCyberAI.git
 
 ---
 
-## 2️⃣ Navigate to Project
+## 2️⃣ Navigate to Project Directory
 
 ```bash
 cd SmartCyberAI
@@ -380,7 +276,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4️⃣ Run Flask Application
+## 4️⃣ Run Application
 
 ```bash
 python app.py
@@ -388,7 +284,7 @@ python app.py
 
 ---
 
-# 📡 API Endpoint
+# API Endpoint
 
 ## Prediction API
 
@@ -403,37 +299,18 @@ Example Request:
     "text": "You are stupid"
 }
 ```
+---
+
+# Conclusion
+
+SmartCyberAI demonstrates the effectiveness of Transformer-based Deep Learning for cyberbullying detection.
+
+The DistilBERT model successfully captures contextual and semantic information from text, enabling accurate multi-label classification of harmful online behavior.
+
+The project combines AI, NLP, and web technologies to create a practical and intelligent cyberbullying detection platform.
 
 ---
 
-# 📚 Research Paper Reference
-
-This project reproduces and extends the baseline methodology from the following Springer research paper:
-
-> AI-based detection of hate speech on social media using stacked ensemble machine learning techniques.
-
-The project further extends the work by introducing:
-
-- Multi-label classification
-- Transformer-based deep learning
-- Comparative experimental analysis
-
----
-
-# 🏆 Conclusion
-
-The proposed DistilBERT-based cyberbullying detection framework achieved significantly better performance than classical machine learning approaches.
-
-The experimental study demonstrates that transformer-based contextual embeddings are highly effective for multi-label cyberbullying detection tasks compared to TF-IDF based traditional models.
-
----
-
-# 👨‍💻 Author
+# Author
 
 Abhay Garg
-
----
-
-# 📜 License
-
-This project is developed for academic and educational purposes.
